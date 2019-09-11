@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #999;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: black;
+}
+</style>
+</head>
+<body>
+
+<h2> Non-Veg Pizzas</h2>
+<p>Order your fresh pizzas here:</p>
+
+<div class="container">
+  <img src="https://www.dominos.co.in/files/items/Chicken_Sausage.jpg" alt="Pizza" style="width:100%">
+  <h2>Chicken_Sausage</h2>
+  <button class="btn"><a href="/order/Chicken_Sausage">Order Now</a></button>
+</div>
+
+<div class="container">
+  <img src="https://www.dominos.co.in/files/items/Chicken_Golden_Delight.jpg" alt="Pizza" style="width:100%">
+  <h2>Chicken_Golden_Delight</h2>
+  <button class="btn"><a href="/order/Chicken_Golden_Delight">Order Now</a></button>
+</div>
+
+<div class="container">
+  <img src="https://www.dominos.co.in/files/items/Pepper_Barbeque.jpg" alt="Pizza" style="width:100%">   
+    <h2>Pepper_Barbeque</h2>
+  <button class="btn"><a href="/order/Pepper_Barbeque">Order Now</a></button>
+</div>
+
+</body>
+</html>

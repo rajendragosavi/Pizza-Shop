@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #999;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: black;
+}
+</style>
+</head>
+<body>
+
+<h2>Veg Pizzas</h2>
+<p>Order your fresh pizzas here:</p>
+
+<div class="container">
+  <img src="https://www.dominos.co.in/files/items/Margherit.jpg" alt="Pizza" style="width:100%">
+  <h2>Margherit</h2>
+  <button class="btn"><a href="/order/Margherit">Order Now</a></button>
+
+</div>
+
+<div class="container">
+  <img src="https://www.dominos.co.in/files/items/Farmhouse.jpg" alt="Pizza" style="width:100%">
+  <h2>Peppy_Paneer</h2>
+  <button class="btn"><a href="/order/Peppy_Paneer">Order Now</a></button>
+</div>
+
+<div class="container">
+  <img src="https://www.dominos.co.in/files/items/Farmhouse.jpg" alt="Pizza" style="width:100%">
+    <h2>Farmhouse</h2>
+    <button class="btn"><a href="/order/Farmhouse">Order Now</a></button>
+</div>
+
+</body>
+</html>
