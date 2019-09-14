@@ -15,7 +15,7 @@ func InitDB() {
 		panic(err)
 	}
 	//
-	err, _ = Db.Exec("DO 1", 1)
+	err = Db.Ping()
 	if err != nil {
 		panic(err.Error())
 	}
