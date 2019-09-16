@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-app-service
+  labels:
+    app: my-go-app
+spec:
+  selector:
+    app: my-go-app
+  ports:
+    - port: 9595
+      targetPort: 9595
+      nodePort: 30008
+      protocol: TCP
+  type: NodePort
