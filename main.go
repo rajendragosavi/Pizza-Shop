@@ -2,6 +2,7 @@ package main
 
 import (
 	dbmanagaer "Super-market/Database"
+	
 	"Super-market/Inventory"
 	"Super-market/Order"
 	"Super-market/Registration"
@@ -9,6 +10,7 @@ import (
 	"net/http"
 
 	_ "github.com/go-sql-driver/mysql"
+
 	"github.com/gorilla/mux"
 )
 
@@ -32,6 +34,7 @@ func main() {
 	r.HandleFunc("/order/{id}", Order.Ordernonvegpizza)
 
 	dbmanagaer.InitDB()
+	dbmanagaer.InitCache()
 	log.Println("Starting http server.....")
 	log.Fatal(http.ListenAndServe(":9595", r))
 
