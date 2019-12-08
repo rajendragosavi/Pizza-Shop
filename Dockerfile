@@ -1,6 +1,6 @@
 FROM golang:latest as builder
 RUN mkdir /app
-ADD Super-market/ /app
+ADD Pizza-Shop/ /app
 WORKDIR /app
 RUN go install
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .
@@ -9,4 +9,4 @@ RUN apk --no-cache add ca-certificates
 WORKDIR /root/
 COPY --from=builder /app/main .
 EXPOSE 9595
-CMD ["go","run","Super-market" ] 
+CMD ["go","run","Pizza-Shop" ] 
