@@ -1,10 +1,10 @@
-package Registration
+package registration
 
 import (
-	dbmanager "Super-market/Database"
 	"database/sql"
 	"fmt"
 	"net/http"
+	"pizza-shop/dbmanager"
 
 	"golang.org/x/crypto/bcrypt"
 )

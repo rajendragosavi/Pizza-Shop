@@ -1,12 +1,12 @@
 package main
 
 import (
-	dbmanagaer "Super-market/Database"
-	"Super-market/Inventory"
-	"Super-market/Order"
-	"Super-market/Registration"
 	"log"
 	"net/http"
+	"pizza-shop/Inventory"
+	"pizza-shop/dbmanager"
+	"pizza-shop/order-placement"
+	"pizza-shop/registration"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/gorilla/mux"
@@ -22,16 +22,16 @@ type Credentials struct {
 func main() {
 
 	r := mux.NewRouter()
-	r.HandleFunc("/", Registration.Homepage)
-	r.HandleFunc("/signup", Registration.SignUp)
-	r.HandleFunc("/login", Registration.Login)
+	r.HandleFunc("/", registration.Homepage)
+	r.HandleFunc("/signup", registration.SignUp)
+	r.HandleFunc("/login", registration.Login)
 	r.HandleFunc("/inventory", Inventory.ReceiveOrderpage)
 	r.HandleFunc("/inventory/VegPizza", Inventory.VegPizza)
 	r.HandleFunc("/inventory/NonVegPizza", Inventory.NonvegPizza)
-	r.HandleFunc("/order/{id}", Order.Ordervegpizza)
-	r.HandleFunc("/order/{id}", Order.Ordernonvegpizza)
+	r.HandleFunc("/order/{id}", order.Ordervegpizza)
+	r.HandleFunc("/order/{id}", order.Ordernonvegpizza)
 
-	dbmanagaer.InitDB()
+	dbmanager.InitDB()
 	log.Println("Starting http server.....")
 	log.Fatal(http.ListenAndServe(":9595", r))
 
